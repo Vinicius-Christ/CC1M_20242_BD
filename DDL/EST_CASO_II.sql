@@ -66,3 +66,45 @@ CREATE TABLE Reservas (
     FOREIGN KEY (id_passageiro) REFERENCES Passageiros(id_passageiro),
     FOREIGN KEY (id_voo) REFERENCES Voos(id_voo)
 );
+
+--ALTER TABLE - Adicionar coluna (ADD)
+ALTER TABLE Passageiros
+ADD email VARCHAR(100);
+
+--ALTER TABLE - Remover coluna (DROP)
+ALTER TABLE Aeronaves
+DROP COLUMN fabricante;
+
+--ALTER TABLE - Modificar tipo de coluna (MODIFY)
+ALTER TABLE Passageiros
+MODIFY telefone VARCHAR(20);
+
+--ALTER TABLE - Renomear coluna (CHANGE)
+ALTER TABLE Funcionarios
+CHANGE cargo funcao ENUM('Piloto', 'Comissário', 'Equipe de Solo', 'Supervisor') NOT NULL;
+
+--DROP TABLE
+DROP TABLE OperacoesVoo;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
