@@ -83,3 +83,37 @@ CREATE TABLE TransferenciasProdutos (
     FOREIGN KEY (id_produto) REFERENCES Produtos(id_produto),
     FOREIGN KEY (id_filial) REFERENCES Filiais(id_filial)
 );
+
+--ALTER TABLE - Adicionar coluna (ADD)
+ALTER TABLE Fornecedores
+ADD email VARCHAR(100);
+
+--ALTER TABLE - Remover coluna (DROP)
+ALTER TABLE Produtos
+DROP COLUMN descricao;
+
+--ALTER TABLE - Modificar tipo de coluna (MODIFY)
+ALTER TABLE Fornecedores
+MODIFY telefone VARCHAR(20);
+
+--ALTER TABLE - Renomear coluna (CHANGE)
+ALTER TABLE Produtos
+CHANGE ponto_ressuprimento nivel_critico INT;
+
+--DROP TABLE
+DROP TABLE RecebimentoMateriais;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
