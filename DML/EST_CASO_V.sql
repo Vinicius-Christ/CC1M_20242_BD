@@ -17,3 +17,10 @@ SELECT v.id_venda, c.nome AS cliente, p.data_pagamento, p.valor, p.status
 FROM Pagamentos p
 JOIN Vendas v ON p.id_venda = v.id_venda
 JOIN Clientes c ON v.id_cliente = c.id_cliente;
+
+-- Gerar relatório de vendas por período e cliente:
+SELECT c.nome AS cliente, COUNT(v.id_venda) AS total_vendas, SUM(v.valor_total) AS valor_total
+FROM Vendas v
+JOIN Clientes c ON v.id_cliente = c.id_cliente
+WHERE v.data_venda BETWEEN '2024-01-01' AND '2024-12-31'
+GROUP BY c.id_cliente;
