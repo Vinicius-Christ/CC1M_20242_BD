@@ -62,3 +62,54 @@ CREATE TABLE Pagamentos (
     status ENUM('pago', 'pendente') NOT NULL,
     FOREIGN KEY (id_venda) REFERENCES Vendas(id_venda)
 );
+
+--ALTER TABLE - Adicionar coluna (ADD)
+ALTER TABLE Clientes
+ADD email VARCHAR(100);
+
+--ALTER TABLE - Remover coluna (DROP)
+ALTER TABLE Fornecedores
+DROP COLUMN telefone;
+
+--ALTER TABLE - Modificar tipo de coluna (MODIFY)
+ALTER TABLE Produtos
+MODIFY categoria VARCHAR(100);
+
+--ALTER TABLE - Renomear coluna (CHANGE)
+ALTER TABLE Pagamentos
+CHANGE data_pagamento data_transacao DATE;
+
+--DROP TABLE
+DROP TABLE ItensVenda;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
