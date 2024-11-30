@@ -79,3 +79,65 @@ CREATE TABLE Pagamentos (
     status ENUM('pago', 'pendente') NOT NULL,
     FOREIGN KEY (id_aluno) REFERENCES Alunos(id_aluno)
 );
+
+--ALTER TABLE - Adicionar coluna (ADD)
+ALTER TABLE Clientes
+ADD telefone_contato VARCHAR(15);
+
+--ALTER TABLE - Remover coluna (DROP)
+ALTER TABLE Produtos
+DROP COLUMN dimensoes;
+
+--ALTER TABLE - Modificar tipo de coluna (MODIFY)
+ALTER TABLE Clientes
+MODIFY telefone_contato VARCHAR(20);
+
+--ALTER TABLE - Renomear coluna (CHANGE)
+ALTER TABLE Produtos
+CHANGE tempo_fabricacao tempo_producao INT;
+
+--DROP TABLE
+DROP TABLE RegistroSuprimentos;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
