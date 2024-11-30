@@ -1,4 +1,4 @@
---1. Comandos de INSERT
+--1. Comandos de INSERT--
 --Tabela Fornecedores
 INSERT INTO Fornecedores (nome_empresa, endereco, pais_origem, pessoa_contato, telefone, email)
 VALUES ('Global Supplies', 'Rua A, 123', 'Brasil', 'Ana Silva', '11987654321', 'ana@globalsupplies.com');
@@ -62,7 +62,7 @@ INSERT INTO ItensPedidoCompra (id_pedido, id_produto, quantidade_solicitada) VAL
 INSERT INTO ItensPedidoCompra (id_pedido, id_produto, quantidade_solicitada) VALUES (5, 5, 90);
 
 
---2. Comandos de UPDATE
+--2. Comandos de UPDATE--
 --Tabela Fornecedores
 UPDATE Fornecedores SET telefone = '11912345678' WHERE id_fornecedor = 1;
 UPDATE Fornecedores SET email = 'novoemail@globalsupplies.com' WHERE id_fornecedor = 1;
@@ -75,7 +75,8 @@ UPDATE Produtos SET preco_unitario = 0.45 WHERE id_produto = 1;
 UPDATE PedidosCompra SET status_pedido = 'Recebido' WHERE id_pedido = 1;
 UPDATE PedidosCompra SET data_esperada_entrega = '2024-11-12' WHERE id_pedido = 2;
 
---3. Comandos de DELETE
+
+--3. Comandos de DELETE--
 --Tabela Fornecedores
 DELETE FROM Fornecedores WHERE id_fornecedor = 5;
 
