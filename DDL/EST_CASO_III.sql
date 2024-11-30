@@ -159,3 +159,38 @@ CREATE TABLE EncomendasProdutos (
     FOREIGN KEY (id_encomenda) REFERENCES Encomendas(id_encomenda),
     FOREIGN KEY (id_produto) REFERENCES Produtos(id_produto)
 );
+
+--ALTER TABLE - Adicionar coluna (ADD)
+ALTER TABLE Clientes
+ADD telefone_contato VARCHAR(15);
+
+--ALTER TABLE - Remover coluna (DROP)
+ALTER TABLE Produtos
+DROP COLUMN dimensoes;
+
+--ALTER TABLE - Modificar tipo de coluna (MODIFY)
+ALTER TABLE Clientes
+MODIFY telefone_contato VARCHAR(20);
+
+--ALTER TABLE - Renomear coluna (CHANGE)
+ALTER TABLE Produtos
+CHANGE tempo_fabricacao tempo_producao INT;
+
+--DROP TABLE
+DROP TABLE RegistroSuprimentos;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
